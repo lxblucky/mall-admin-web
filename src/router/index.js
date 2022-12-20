@@ -35,6 +35,8 @@ export const constantRouterMap = [
 ]
 
 export const asyncRouterMap = [
+
+
   {
     path: '/pms',
     component: Layout,
@@ -129,6 +131,24 @@ export const asyncRouterMap = [
       }
     ]
   },
+
+  {
+    path: '/test01',
+    component: Layout,
+    redirect: '/test01/target',
+    name: 'test01',
+    meta: {title: '测试栏目', icon: 'order'},
+    children: [
+      {
+        path: 'target',
+        name: 'target',
+        component: () => import('@/views/test01/target/index'),
+        meta: {title: '指标列表', icon: 'order'}
+      }
+    ]
+  },
+
+
   {
     path: '/oms',
     component: Layout,

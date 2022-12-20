@@ -47,6 +47,7 @@
       </el-form>
     </el-card>
     <img :src="login_center_bg" class="login-center-layout">
+<!--    对话框：二维码的  -->
     <el-dialog
       title="公众号二维码"
       :visible.sync="dialogVisible"
@@ -62,6 +63,7 @@
     <el-button type="primary" @click="dialogConfirm">确定</el-button>
       </span>
     </el-dialog>
+
   </div>
 </template>
 
@@ -123,6 +125,7 @@
       },
       handleLogin() {
         this.$refs.loginForm.validate(valid => {
+          console.log("handleLogin的valid："+valid);
           if (valid) {
             // let isSupport = getSupport();
             // if(isSupport===undefined||isSupport==null){
@@ -145,6 +148,7 @@
         })
       },
       handleTry(){
+        console.log("进入--222");
         this.dialogVisible =true
       },
       dialogConfirm(){

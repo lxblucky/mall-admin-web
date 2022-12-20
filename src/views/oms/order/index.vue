@@ -417,6 +417,7 @@
           this.listLoading = false;
           this.list = response.data.list;
           this.total = response.data.total;
+          console.log(response.data.list);
         });
       },
       deleteOrder(ids){
