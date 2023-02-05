@@ -301,7 +301,7 @@
         editSkuInfo:{
           dialogVisible:false,
           productId:null,
-          productSn:'',
+          productSn:null,
           productAttributeCategoryId:null,
           stockList:[],
           productAttr:[],
